@@ -1,0 +1,78 @@
+/* Основные цвета */
+:root {
+    --primary-color: #2185d0;
+    /* Синий */
+    --secondary-color: #1b1c1d;
+    /* Темно-серый */
+    --background-color: #f5f5f5;
+    /* Светло-серый */
+    --text-color: #333;
+    /* Основной текст */
+    --accent-color: #00b5ad;
+    /* Акцентный цвет (бирюзовый) */
+}
+
+/* Основные стили */
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Заголовки */
+h1,
+h2,
+h3 {
+    color: var(--primary-color);
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Кнопки */
+.ui.button.primary {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Сайдбар */
+.ui.vertical.menu {
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Подвал */
+.ui.footer.segment {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 20px 0;
+    margin-top: 50px;
+}
+
+/* Стили для изображений на странице "Сравнение" */
+.ui.images img {
+    width: 250px;
+    /* Фиксированная ширина */
+    height: 100px;
+    /* Фиксированная высота */
+
+
+
+    margin: 10px;
+    /* Отступы между изображениями */
+}
+
+/* Дополнительные стили для страницы "Сравнение" */
+.comparison-table {
+    margin-top: 20px;
+    /* Отступ сверху для таблицы */
+}
+
+.comparison-table th {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.comparison-table td {
+    background-color: white;
+    color: var(--text-color);
+}

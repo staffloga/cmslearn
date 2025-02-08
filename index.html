@@ -31,14 +31,70 @@
                 <a class="item" href="#what-is-cms">Что такое CMS?</a>
                 <a class="item" href="#popular-cms">Популярные CMS</a>
                 <a class="item" href="#benefits">Преимущества</a>
+                <a class="item" href="#form-section">Обратная связь</a>
             </div>
         </div>
+
         <div class="twelve wide column">
             <main>
                 <h1>Добро пожаловать на сайт о CMS</h1>
                 <p>Системы управления контентом (CMS) являются мощным инструментом для управления контентом на
                     веб-сайтах. Мы рады видеть вас на нашем ресурсе, где вы можете узнать больше об этой технологии!</p>
                 <img src="assets/images/cms.png" alt="CMS" style="max-width:100%; height:auto;">
+
+                <h2 id="what-is-cms">Что такое CMS?</h2>
+                <p>CMS (система управления контентом) позволяет пользователям создавать и управлять цифровым контентом
+                    без необходимости программирования или технических навыков.</p>
+
+                <h2 id="popular-cms">Популярные CMS</h2>
+                <p>Существуют различные CMS, такие как WordPress, Joomla и Drupal, каждая из которых имеет свои
+                    уникальные особенности и функциональность.</p>
+
+                <h2 id="benefits">Преимущества</h2>
+                <p>Использование CMS приносит множество преимуществ, включая простоту использования, доступ к различным
+                    шаблонам и плагинам, а также возможность быстрой настройки и изменения содержимого.</p>
+
+                <h2 id="form-section">Обратная связь</h2>
+                <form class="ui form" style="margin-top: 20px;">
+                    <div class="field">
+                        <label>Имя</label>
+                        <input type="text" name="name" placeholder="Введите ваше имя">
+                    </div>
+                    <div class="field">
+                        <label>Нравится ли вам наш сайт?</label>
+                        <div class="ui checkbox">
+                            <input type="checkbox" name="fruit" tabindex="0" class="hidden">
+                            <label>Да</label>
+                        </div>
+                        <div class="ui checkbox">
+                            <input type="checkbox" name="fruit" tabindex="0" class="hidden">
+                            <label>Нет</label>
+                        </div>
+                    </div>
+                    <div class="inline field">
+                        <label>Пол</label>
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="gender" value="male" tabindex="0" class="hidden">
+                            <label>Мужской</label>
+                        </div>
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="gender" value="female" tabindex="0" class="hidden">
+                            <label>Женский</label>
+                        </div>
+                    </div>
+                    <button class="ui button" type="submit">Отправить</button>
+                </form>
+
+                <!-- Нумерация страниц -->
+                <div class="ui menu" style="margin-top: 20px;">
+                    <a class="item" href="index.html">1</a>
+                    <a class="item" href="about.html">2</a>
+                    <a class="item" href="features.html">3</a>
+                    <a class="item" href="comparison.html">4</a>
+                    <a class="item" href="tutorials.html">5</a>
+                    <a class="item" href="fomantic-ui.html">6</a>
+                    <a class="item" href="contact.html">7</a>
+                </div>
             </main>
         </div>
     </div>
@@ -46,20 +102,16 @@
     <footer class="ui footer segment">
         <div class="ui container">
             <p>&copy; 2025 Системы управления контентом (CMS)</p>
-            <div class="ui menu">
-                <a class="item" href="index.html">1</a>
-                <a class="item" href="about.html">2</a>
-                <a class="item" href="features.html">3</a>
-                <a class="item" href="comparison.html">4</a>
-                <a class="item" href="tutorials.html">5</a>
-                <a class="item" href="fomantic-ui.html">6</a>
-                <a class="item" href="contact.html">7</a>
-            </div>
         </div>
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="assets/fomantic-ui/dist/semantic.min.js"></script>
+    <script>
+        // Инициализация чекбоксов и радиокнопок
+        $('.ui.checkbox').checkbox();
+        $('.ui.radio.checkbox').checkbox();
+    </script>
 </body>
 
 </html>

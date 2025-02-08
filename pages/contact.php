@@ -8,7 +8,7 @@ include '../includes/sidebar.php';
     <p>Свяжитесь со мной для получения дополнительной информации:</p>
     <ul>
         <li>Телефон: +79222726440</li>
-        <li>Email: ваш_email@example.com</li>
+        <li>Email: staffloga@yandex.ru</li>
     </ul>
     <form class="ui form">
         <div class="field">

@@ -14,7 +14,13 @@
 
 <body>
     <div class="ui container">
-        <div class="ui menu">
+        <!-- Кнопка для сворачивания меню -->
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <i class="bars icon"></i> <!-- Иконка "бургер" из Fomantic-UI -->
+        </div>
+
+        <!-- Главное меню -->
+        <div class="ui menu" id="main-menu">
             <a class="item" href="index.html">Главная</a>
             <a class="item" href="about.html">О CMS</a>
             <a class="item" href="features.html">Возможности</a>
@@ -111,6 +117,12 @@
         // Инициализация чекбоксов и радиокнопок
         $('.ui.checkbox').checkbox();
         $('.ui.radio.checkbox').checkbox();
+
+        // Функция для сворачивания/разворачивания меню
+        function toggleMenu() {
+            const menu = document.getElementById('main-menu');
+            menu.classList.toggle('collapsed');
+        }
     </script>
 </body>
 

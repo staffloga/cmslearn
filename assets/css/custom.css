@@ -1,34 +1,138 @@
-/* Стили для кнопки сворачивания меню */
-.menu-toggle {
-    cursor: pointer;
+/* Основные цвета */
+:root {
+    --primary-color: #2185d0; /* Синий */
+    --secondary-color: #1b1c1d; /* Темно-серый */
+    --background-color: #f5f5f5; /* Светло-серый */
+    --text-color: #333; /* Основной текст */
+    --accent-color: #00b5ad; /* Акцентный цвет (бирюзовый) */
+}
+
+/* Основные стили */
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Заголовки */
+h1, h2, h3 {
+    color: var(--primary-color);
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 0; /* Убираем лишние отступы */
+}
+
+/* Кнопки */
+.ui.button.primary {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Сайдбар */
+.ui.vertical.menu {
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px; /* Добавляем отступ снизу */
+}
+
+/* Подвал */
+.ui.footer.segment {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 20px 0;
+    margin-top: 50px;
+    text-align: center; /* Центрируем текст */
+}
+
+/* Стили для изображений на странице "Сравнение" */
+.ui.images img {
+    max-width: 100%; /* Изображения адаптируются под ширину экрана */
+    height: auto; /* Сохраняем пропорции */
+    margin: 10px 0; /* Отступы сверху и снизу */
+}
+
+/* Дополнительные стили для страницы "Сравнение" */
+.comparison-table {
+    margin-top: 20px; /* Отступ сверху для таблицы */
+    width: 100%; /* Таблица занимает всю ширину */
+    overflow-x: auto; /* Добавляем горизонтальную прокрутку на маленьких экранах */
+}
+
+.comparison-table th {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px; /* Добавляем отступы для ячеек */
+}
+
+.comparison-table td {
+    background-color: white;
+    color: var(--text-color);
+    padding: 10px; /* Добавляем отступы для ячеек */
+}
+
+/* Контейнер */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box; /* Учитываем padding в ширине */
+}
+
+/* Меню */
+.ui.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Равномерное распределение элементов */
+}
+
+.ui.menu .item {
+    flex: 1;
     padding: 10px;
-    text-align: right;
-    display: none; /* По умолчанию скрыта */
+    text-align: center;
+    cursor: pointer;
+    white-space: nowrap; /* Текст не переносится */
 }
 
-.menu-toggle .bars.icon {
-    font-size: 24px; /* Размер иконки */
-    color: var(--primary-color); /* Цвет иконки */
-}
-
-/* Стили для меню */
-#main-menu {
-    display: flex; /* Меню всегда видно по умолчанию */
-    transition: all 0.3s ease; /* Плавное сворачивание */
-}
-
-/* Стили для скрытого меню */
-#main-menu.collapsed {
-    display: none; /* Скрываем меню */
-}
-
-/* Показываем кнопку на всех устройствах */
-@media (max-width: 1200px) {
-    .menu-toggle {
-        display: block; /* Показываем кнопку */
+/* Адаптация для мобильных устройств */
+@media (max-width: 768px) {
+    .ui.menu {
+        flex-direction: column; /* Меню становится вертикальным */
+        align-items: stretch;
     }
 
-    #main-menu {
-        flex-direction: column; /* Меню становится вертикальным */
+    .ui.menu .item {
+        border-bottom: 1px solid #ccc; /* Разделитель между пунктами меню */
+        padding: 15px; /* Увеличиваем отступы для удобства на мобильных */
+    }
+
+    .ui.grid {
+        display: flex;
+        flex-direction: column; /* Сетка становится вертикальной */
+    }
+
+    .four.wide.column, .twelve.wide.column {
+        width: 100% !important; /* Колонки занимают всю ширину */
+    }
+
+    h1 {
+        font-size: 24px; /* Уменьшаем размер заголовка */
+    }
+
+    h2 {
+        font-size: 20px; /* Уменьшаем размер подзаголовка */
+    }
+
+    p {
+        font-size: 14px; /* Уменьшаем размер текста */
+    }
+
+    .ui.vertical.menu {
+        margin-bottom: 10px; /* Уменьшаем отступ для сайдбара */
+    }
+
+    .ui.footer.segment {
+        margin-top: 20px; /* Уменьшаем отступ для подвала */
     }
 }
